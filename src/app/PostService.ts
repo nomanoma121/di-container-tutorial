@@ -1,6 +1,7 @@
-import { inject } from "tsyringe";
+import { inject, injectable } from "tsyringe";
 import { IPostRepository } from "../shared/types";
 
+@injectable()
 export class PostService {
   constructor(
     @inject("Repo") private repository: IPostRepository,
